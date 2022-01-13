@@ -15,7 +15,7 @@ const Login = (props) => {
     setFormIsValid(
       enteredEmail.includes('@') && enteredPassword.trim().length > 6
     );
-  }, [setFormIsValid, enteredEmail, enteredPassword]);
+  }, [enteredEmail, enteredPassword]);
 
   const emailChangeHandler = (event) => {
     setEnteredEmail(event.target.value);
@@ -78,3 +78,7 @@ const Login = (props) => {
 };
 
 export default Login;
+
+
+
+//it's called useEffect, and it has one main job, it's there to handle side effects and often side effects are http requests and so on, but it's also a side effect, if we listen to every keystroke and save that entered data as we're doing it in the emailChangeHandler for example
